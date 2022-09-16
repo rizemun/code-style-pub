@@ -1,0 +1,93 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/_next/static/css/df92e39d7ac6b287.css" as="style"/><link rel="stylesheet" href="/_next/static/css/df92e39d7ac6b287.css" data-n-g=""/><link rel="preload" href="/_next/static/css/8c3fe5687b21a392.css" as="style"/><link rel="stylesheet" href="/_next/static/css/8c3fe5687b21a392.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-cc9c69bc14c8e1bc.js" defer=""></script><script src="/_next/static/chunks/framework-fe99aa755573eedd.js" defer=""></script><script src="/_next/static/chunks/main-a307755b2b1681d8.js" defer=""></script><script src="/_next/static/chunks/pages/_app-620102ba3a9296b8.js" defer=""></script><script src="/_next/static/chunks/pages/base-17bf5e048d0e6d48.js" defer=""></script><script src="/_next/static/koYQ5xVv_W-UnTnHSB4ft/_buildManifest.js" defer=""></script><script src="/_next/static/koYQ5xVv_W-UnTnHSB4ft/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="Layout_layout__3sqKB"><div class="Layout_layout__column__RP2Ig Layout_layout__column_left__x_wOT"><ul><li>JS &amp; TS</li><li>Styles</li><li>Common</li><li>4</li><li>5</li></ul></div><div class="Layout_layout__column__RP2Ig Layout_layout__column_right__q2i04"><h1>CodeStyle</h1>
+<p>Для повышения качества кода нужно соблюдать некоторые правила при разработке, одно из которых, очень важное, это единообразие. Единообразие в именовании, форматировании кода и подходах к решению задач это то, что позволяет на дистанции ускорить разработку, ввиду уменьшения порога входа новых разработчиков в существующие проекты или развертывание новых. Полная унификация невозможна ввиду различных применяемых технологий и стеков этих технологий, а также проектов с ними. Можно лишь сделать это в рамках отдельных технологий. Далее будут описаны принципы единообразия, которых крайне здорово было бы придерживаться при работе в рамках рабочих компетенций с языками программирования и другими сущностями вовлеченными в процесс разработки.</p>
+<h1>JS &amp; TS</h1>
+<h2>Линтинг</h2>
+<p>Линтинг кода - первая ступень к его унификации, включает в себя определенные правила форматирования языка, часть которых выполняется автоматически, а часть нужно править вручную. В качестве
+Базовые правила для линтинга берем отсюда (📣todo)</p>
+<p>Правила для проектов с разными технологиями будут подготовлены и описаны в таблице ниже, для работы с ними смотри инструкцию по конфигурации линтингов в проекте (📣todo).</p>
+<h3>Именование</h3>
+<p>Для именования js переменных используем <strong><a href="https://ru.wikipedia.org/wiki/CamelCase">lowerCamelCase</a></strong></p>
+<p>Для именования констант используем так же lowerCamelCase, для констант хранящих какие то данные в достаточно большой области видимости (например ключи api) возможно использование</p>
+<p>Для именования css классов используем <a href="https://ru.bem.info/methodology/naming-convention/">BEM</a>. В качестве разделителей между блоком и элементом используем <code>__</code>, между элементом и модификатором <code>_</code>.</p>
+<aside><p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc6c4241-b0d1-4315-b1d8-d978cfe2218f/reactjs-icon.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc6c4241-b0d1-4315-b1d8-d978cfe2218f/reactjs-icon.png" width="40px"/> В разметке используем для указания классов библиотеку <code>[classnames](https://www.npmjs.com/package/classnames)</code>, ее bind версию.</p><details><summary>Пример использования</summary><div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> classnames </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;classnames/bind&#x27;</span><span style="color:#24292F">;</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> styles </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./Button.module.scss&#x27;</span><span style="color:#24292F">;</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">cn</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> classnames.</span><span style="color:#8250DF">bind</span><span style="color:#24292F">(styles);</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#8250DF">Button</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> ({ </span><span style="color:#953800">children</span><span style="color:#24292F">, </span><span style="color:#953800">onClick</span><span style="color:#24292F">, </span><span style="color:#953800">type</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;button&#x27;</span><span style="color:#24292F">, </span><span style="color:#953800">isOutline</span><span style="color:#24292F">, </span><span style="color:#953800">isDark</span><span style="color:#24292F">, </span><span style="color:#953800">isDisabled</span><span style="color:#24292F">, </span><span style="color:#953800">className</span><span style="color:#24292F"> }) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> (</span></span>
+<span class="line"><span style="color:#24292F">&lt;</span><span style="color:#116329">button</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#0550AE">type</span><span style="color:#CF222E">={</span><span style="color:#24292F">type</span><span style="color:#CF222E">}</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#0550AE">className</span><span style="color:#CF222E">={</span><span style="color:#8250DF">cn</span><span style="color:#24292F">(</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;button&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    {</span></span>
+<span class="line"><span style="color:#24292F">      button_outline: isOutline,</span></span>
+<span class="line"><span style="color:#24292F">      button_dark: isDark,</span></span>
+<span class="line"><span style="color:#24292F">      button_disabled: isDisabled,</span></span>
+<span class="line"><span style="color:#24292F">    },</span></span>
+<span class="line"><span style="color:#24292F">    className</span></span>
+<span class="line"><span style="color:#24292F">  )</span><span style="color:#CF222E">}</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#0550AE">onClick</span><span style="color:#CF222E">={</span><span style="color:#24292F">onClick</span><span style="color:#CF222E">}</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#0550AE">disabled</span><span style="color:#CF222E">={</span><span style="color:#24292F">isDisabled</span><span style="color:#CF222E">}</span></span>
+<span class="line"><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">{</span><span style="color:#24292F">children</span><span style="color:#CF222E">}</span></span>
+<span class="line"><span style="color:#24292F">&lt;/</span><span style="color:#116329">button</span><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">);</span></span></code></pre></div></details></aside>
+<h1>Styles</h1>
+<h2>Линтинг</h2>
+<p>Для проверки соответствия стилей продуманным в текущем документе используем stylelint, его базовая конфигурация доступна в доке.</p>
+<p><a href="https://www.notion.so/stylelint-fc880b3f8e10475e81b6bda059b3f85e">Конфигурация stylelint</a></p>
+<h2>Z-index группы</h2>
+<p>Проект стоит разбить на группы слоев, определив что над чем расположено. Причем, так как мы не ограничены в значениях z-index, стоит делать пропуски между группами, для возможности расположения каких-либо элементов между слоев.
+Пример:</p>
+<h1>Common</h1>
+<h2>Действия при создании проекта</h2>
+<p>Создать файл README.md или отредактировать сгенерированный, добавив информацию о проекте, такую как:
+• название проекта
+• краткое описание, если из названия проекта не ясно его предназначение</p>
+<p>• вся необходимая информация для развертывания (установки) проекта и запуска/тестирования, обязательно самим протестировать с нуля разворачивание в новой папке.
+• Если в проекте используются нестандартные библиотеки или архитектурные подходы, то их тоже нужно указывать. Причем желательно указывать ссылки на их репозитории, чтобы человеку поставленному на этот проект, но не работавшему с используемыми технологиями, не нужно было искать их в гугле.
+• Если проект из репозитория уже где-то развернут (например, на github pages), то следует указать на него ссылку.
+В проекте должно быть использовано по минимуму глобальных библиотек, все они должны быть перечислены в Readme (webpack, karma, sanity и все, что может быть поставлено через npm, точно не должно быть глобальным)</p>
+<h2>Общие настройки</h2>
+<h3>Git</h3>
+<p>В git стоит настроить пользователя, для корректного отображения. Рекомендуется использовать формат <code>nSurname</code> /<code>NSurname</code>/<code>nsurname</code>, где n - первая буква имени, а Surname, соответственно, фамилия. Допустимы и другие варианты. Так же стоит указать почту.</p>
+<p>Проверка текущего пользователя:</p>
+<pre><code>git config user.name
+git config user.email
+</code></pre>
+<p>Изменение данных:</p>
+<pre><code>git config --global user.name &quot;John Doe&quot;
+git config --global user.email johndoe@example.com
+</code></pre>
+<p>На windows компьютерах также возникает проблема с символами переноса строки, многие файлы попадают в коммит из-за того, что git по умолчанию приводит символ переноса строки к системному. Чтобы  настроить приведение символов переноса строки нужно воспользоваться настройкой <code>File ⇒ Settings ⇒ Editor ⇒ Code style ⇒ General ⇒ Line separator</code> в значение <code>Unix and macOS(\n)</code> и изменением конфига git:</p>
+<pre><code>git config --global core.autocrlf false
+</code></pre>
+<h3>.editorconfig</h3>
+<p>Файл расположенный в корне проекта используется для единообразной общей настройки разных IDE и редакторов.</p>
+<details><summary>Значения .editorconfig по умолчанию</summary><pre><code>root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+charset = utf-8
+
+</code></pre></details>
+<h2>Действия разработчика при включении в проект (фронт)</h2>
+<ul>
+<li>Спросить на входе, под какие браузеры верстаем (обязательно).</li>
+<li>Спросить, есть ли адаптив, если нет — то под какие разрешения верстать и что делать для других экранов.</li>
+<li>при работе использовать локальный сервер а не открытие файла в браузере (Запускать сайт через http://localhost, а не через file:///c:\test.html). Причина - иначе могут быть проблемы с элементами, вставляемыми через iframe (например, лайки от фб, вк и т. д.), и при работе скриптов, которые отправляют HTTP-запросы, плюс еще могут быть вообще неожиданные и неизвестные нам проблемы.</li>
+<li>Заранее четко узнать, что является фиксированным результатом проекта — развернутое на нашем сервере production-окружение или только git-репозиторий, а то и zip-архив, отправленный по почте.</li>
+<li>Всегда помните: если вы можете решить проблемы каким-то способом, это не значит, что способ действительно стоит применять. И в верстке, и в программировании часто возникают ситуации, когда можно написать вполне рабочий код, но сделать это ненадежным способом, либо используя откровенные хаки, неочевидные другим разработчикам, либо просто оформив все некрасивым способом. Если перед вами появилась проблема, то нужно не только решить ее, но и сделать решение читабельным, масштабируемым и надежным. Во всех случаях, когда появляются сомнения, лучше спросить более опытных товарищей - это и вам позволит быстрее вырасти, и проекту получить более качественный код.</li>
+</ul>
+<p>This is a list in markdown:</p>
+<ul>
+<li>One</li>
+<li>Two</li>
+<li>Three</li>
+</ul>
+<p>Checkout my React component:</p></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/base","query":{},"buildId":"koYQ5xVv_W-UnTnHSB4ft","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
