@@ -1,0 +1,772 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/code-style-pub/_next/static/css/38abdf5bcdd7d32e.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/38abdf5bcdd7d32e.css" data-n-g=""/><link rel="preload" href="/code-style-pub/_next/static/css/8c3fe5687b21a392.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/8c3fe5687b21a392.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/code-style-pub/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/code-style-pub/_next/static/chunks/webpack-62d0f791987683bd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/framework-fe99aa755573eedd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/main-5204d7fdcf7c3712.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/_app-e17786fcc1a3f2d6.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/573-38b5de67e3c6f644.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/linters/stylelint-43f31b0b91252ea6.js" defer=""></script><script src="/code-style-pub/_next/static/JkuK93bYLSZLzVCmJQyhb/_buildManifest.js" defer=""></script><script src="/code-style-pub/_next/static/JkuK93bYLSZLzVCmJQyhb/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="Layout_layout__3sqKB"><div class="Layout_layout__column__RP2Ig Layout_layout__column_left__x_wOT"><ul><li><a href="/code-style-pub">Main</a></li><li><a href="/code-style-pub/linters">Linters</a></li></ul></div><div class="Layout_layout__column__RP2Ig Layout_layout__column_right__q2i04"><h2>Afterlogic Stylelint</h2>
+<h3>v 1.0</h3>
+<p><a href="/linters">Как использовать</a></p>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#0550AE">module</span><span style="color:#24292F">.</span><span style="color:#0550AE">exports</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">  extends: [</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;stylelint-config-recommended-scss&#x27;</span></span>
+<span class="line"><span style="color:#24292F">  ],</span></span>
+<span class="line"><span style="color:#24292F">  plugins: [</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;stylelint-order&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">  ],</span></span>
+<span class="line"><span style="color:#24292F">  rules: {</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">/**</span></span>
+<span class="line"><span style="color:#6E7781">     *  Stylelint</span></span>
+<span class="line"><span style="color:#6E7781">     *  https://stylelint.io/user-guide/rules/list</span></span>
+<span class="line"><span style="color:#6E7781">     *  commented rules are disabled, uncomment and change them if you need</span></span>
+<span class="line"><span style="color:#6E7781">     *</span></span>
+<span class="line"><span style="color:#6E7781">     *  Possible errors</span></span>
+<span class="line"><span style="color:#6E7781">     *  https://stylelint.io/user-guide/rules/list#possible-errors</span></span>
+<span class="line"><span style="color:#6E7781">    */</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Color</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;color-no-invalid-hex&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Font family</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;font-family-no-duplicate-names&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;font-family-no-missing-generic-family-keyword&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Function</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;function-calc-no-unspaced-operator&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;function-linear-gradient-no-nonstandard-direction&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// String</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;string-no-newline&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Unit</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;unit-no-unknown&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Property</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;property-no-unknown&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Keyframe declaration</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;keyframe-declaration-no-important&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Declaration block</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;declaration-block-no-duplicate-properties&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;declaration-block-no-shorthand-property-overrides&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Block</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;block-no-empty&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Selector</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-pseudo-class-no-unknown&#x27;</span><span style="color:#24292F">: [</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      {</span></span>
+<span class="line"><span style="color:#24292F">        ignorePseudoClasses: [</span><span style="color:#0A3069">&#x27;export&#x27;</span><span style="color:#24292F">],</span></span>
+<span class="line"><span style="color:#24292F">      },</span></span>
+<span class="line"><span style="color:#24292F">    ],</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-pseudo-element-no-unknown&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-type-no-unknown&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Media feature</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;media-feature-name-no-unknown&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// At-rule</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;at-rule-no-unknown&#x27;: null,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Comment</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;comment-no-empty&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// General / Sheet</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;no-descending-specificity&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;no-duplicate-at-import-rules&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;no-duplicate-selectors&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;no-empty-source&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;no-extra-semicolons&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;no-invalid-double-slash-comments&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">/**</span></span>
+<span class="line"><span style="color:#6E7781">     * Limit language features</span></span>
+<span class="line"><span style="color:#6E7781">     * https://stylelint.io/user-guide/rules/list#limit-language-features</span></span>
+<span class="line"><span style="color:#6E7781">    */</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Alpha-value</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;alpha-value-notation&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;number&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Hue</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;hue-degree-notation&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;number&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Color</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;color-function-notation&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;legacy&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;color-named&#x27;</span><span style="color:#24292F">: [</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      {</span></span>
+<span class="line"><span style="color:#24292F">        ignore: [</span><span style="color:#0A3069">&#x27;inside-function&#x27;</span><span style="color:#24292F">]</span></span>
+<span class="line"><span style="color:#24292F">      }</span></span>
+<span class="line"><span style="color:#24292F">    ],</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;color-no-hex&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Length</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;length-zero-no-unit&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Font Weight</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;font-weight-notation&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;named-where-possible&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Function</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;function-blacklist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;function-url-no-scheme-relative&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;function-url-scheme-blacklist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;function-url-scheme-whitelist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;function-whitelist&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Keyframes</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;keyframes-name-pattern&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Number</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;number-max-precision&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">3</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Time</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;time-min-milliseconds&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Unit</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;unit-disallowed-list&#x27;</span><span style="color:#24292F">: [</span><span style="color:#0A3069">&#x27;turn&#x27;</span><span style="color:#24292F">],</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;unit-whitelist&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Shorthand property</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;shorthand-property-no-redundant-values&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Value</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;value-no-vendor-prefix&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Custom property</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;custom-property-pattern&#x27;: &#x27;al-.+&#x27;,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Property</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;property-disallowed-list&#x27;</span><span style="color:#24292F">: [],</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;property-no-vendor-prefix&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;property-whitelist&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Declaration</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;declaration-block-no-redundant-longhand-properties&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;declaration-no-important&#x27;</span><span style="color:#24292F">: [</span><span style="color:#0550AE">true</span><span style="color:#24292F">, {</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0A3069">&quot;severity&quot;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&quot;warning&quot;</span></span>
+<span class="line"><span style="color:#24292F">    }],</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;declaration-property-unit-disallowed-list&#x27;: {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">//    &#x27;/^animation/&#x27;: [&#x27;ms&#x27;],</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">//    &#x27;/^transition/&#x27;: [&#x27;s&#x27;],</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// },</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;declaration-property-unit-allowed-list&#x27;: {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">//    &#x27;line-height&#x27;: [],</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// },</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;declaration-property-value-blacklist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;declaration-property-value-whitelist&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Declaration block</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;declaration-block-single-line-max-declarations&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">1</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Selector</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-attribute-operator-blacklist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-attribute-operator-whitelist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-class-pattern&#x27;</span><span style="color:#24292F">: [</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0A3069">/</span><span style="color:#CF222E">^</span><span style="color:#0550AE">[a-z_\-</span><span style="color:#116329;font-style:italic">\d</span><span style="color:#0550AE">]</span><span style="color:#CF222E">+$</span><span style="color:#0A3069">/</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      {</span></span>
+<span class="line"><span style="color:#24292F">        resolveNestedSelectors: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">        message: </span><span style="color:#0A3069">&quot;Expected class name to be lowcase kebab-case&quot;</span></span>
+<span class="line"><span style="color:#24292F">      }</span></span>
+<span class="line"><span style="color:#24292F">    ],</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-combinator-blacklist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-combinator-whitelist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-id-pattern&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-max-attribute&#x27;</span><span style="color:#24292F">: [</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0550AE">1</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      {</span></span>
+<span class="line"><span style="color:#24292F">        ignoreAttributes: [</span><span style="color:#0A3069">&#x27;/^data-/&#x27;</span><span style="color:#24292F">],</span></span>
+<span class="line"><span style="color:#24292F">      },</span></span>
+<span class="line"><span style="color:#24292F">    ],</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-max-class&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-max-combinators&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-max-compound-selectors&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-max-empty-lines&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">0</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-max-id&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-max-pseudo-class&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-max-specificity&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-max-type&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-max-universal&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">3</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-nested-pattern&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-no-qualifying-type&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-no-vendor-prefix&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-pseudo-class-blacklist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-pseudo-class-whitelist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-pseudo-element-blacklist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-pseudo-element-colon-notation&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;double&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;selector-pseudo-element-whitelist&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Media feature</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;media-feature-name-blacklist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;media-feature-name-no-vendor-prefix&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;media-feature-name-value-whitelist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;media-feature-name-whitelist&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Custom media</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;custom-media-pattern&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// At-rule</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;at-rule-blacklist&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;at-rule-no-vendor-prefix&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;at-rule-property-required-list&#x27;</span><span style="color:#24292F">: {</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0A3069">&#x27;font-face&#x27;</span><span style="color:#24292F">: [</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#0A3069">&#x27;font-family&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#0A3069">&#x27;font-style&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#0A3069">&#x27;font-weight&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      ],</span></span>
+<span class="line"><span style="color:#24292F">    },</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;at-rule-whitelist&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Comment</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;comment-word-blacklist&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// General / Sheet</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;max-nesting-depth&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">3</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;no-unknown-animations&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">/**</span></span>
+<span class="line"><span style="color:#6E7781">     *  Stylistic issues</span></span>
+<span class="line"><span style="color:#6E7781">     *  https://stylelint.io/user-guide/rules/list#stylistic-issues</span></span>
+<span class="line"><span style="color:#6E7781">    */</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Color</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;color-hex-case&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;lower&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;color-hex-length&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;short&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Font family</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;font-family-name-quotes&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-where-recommended&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Function</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;function-comma-newline-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-multi-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;function-comma-newline-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never-multi-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;function-comma-space-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-single-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;function-comma-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;function-max-empty-lines&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">0</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;function-name-case&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;lower&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;function-parentheses-newline-inside&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-multi-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;function-parentheses-space-inside&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never-single-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;function-url-quotes&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;function-whitespace-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Number</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;number-leading-zero&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;number-no-trailing-zeros&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// String</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;string-quotes&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;single&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Unit</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;unit-case&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;lower&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Value</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;value-keyword-case&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;lower&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Value list</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;value-list-comma-newline-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-multi-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;value-list-comma-newline-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never-multi-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;value-list-comma-space-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-single-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;value-list-comma-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;value-list-max-empty-lines&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">1</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Custom property</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;custom-property-empty-line-before&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Property</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;property-case&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Declaration</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;declaration-bang-space-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;declaration-bang-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;declaration-colon-newline-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-multi-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;declaration-colon-space-after&#x27;: &#x27;always&#x27;,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;declaration-colon-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;declaration-empty-line-before&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Declaration block</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;declaration-block-semicolon-newline-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;declaration-block-semicolon-newline-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never-multi-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;declaration-block-semicolon-space-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-single-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;declaration-block-semicolon-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;declaration-block-trailing-semicolon&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Block</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;block-closing-brace-empty-line-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;block-closing-brace-newline-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;block-closing-brace-newline-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-multi-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;block-closing-brace-space-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-single-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;block-closing-brace-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-single-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;block-opening-brace-newline-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;block-opening-brace-newline-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never-single-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;block-opening-brace-space-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-single-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;block-opening-brace-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Selector</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-attribute-brackets-space-inside&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-attribute-operator-space-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-attribute-operator-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-attribute-quotes&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-combinator-space-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-combinator-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-descendant-combinator-no-non-space&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-pseudo-class-case&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;lower&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-pseudo-class-parentheses-space-inside&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-pseudo-element-case&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;lower&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-type-case&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;lower&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Selector list</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-list-comma-newline-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-multi-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-list-comma-newline-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never-multi-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-list-comma-space-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-single-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;selector-list-comma-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Rule</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;rule-empty-line-before&#x27;</span><span style="color:#24292F">: [</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      {</span></span>
+<span class="line"><span style="color:#24292F">        except: [</span><span style="color:#0A3069">&#x27;first-nested&#x27;</span><span style="color:#24292F">],</span></span>
+<span class="line"><span style="color:#24292F">        ignore: [</span><span style="color:#0A3069">&#x27;after-comment&#x27;</span><span style="color:#24292F">],</span></span>
+<span class="line"><span style="color:#24292F">      },</span></span>
+<span class="line"><span style="color:#24292F">    ],</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Media feature</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;media-feature-colon-space-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;media-feature-colon-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;media-feature-name-case&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;lower&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;media-feature-parentheses-space-inside&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;media-feature-range-operator-space-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;media-feature-range-operator-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Media query list</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;media-query-list-comma-newline-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-multi-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;media-query-list-comma-newline-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never-multi-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;media-query-list-comma-space-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-single-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;media-query-list-comma-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// At-rule</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;at-rule-empty-line-before&#x27;</span><span style="color:#24292F">: [</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      {</span></span>
+<span class="line"><span style="color:#24292F">        except: [</span><span style="color:#0A3069">&#x27;first-nested&#x27;</span><span style="color:#24292F">, </span><span style="color:#0A3069">&#x27;blockless-after-same-name-blockless&#x27;</span><span style="color:#24292F">],</span></span>
+<span class="line"><span style="color:#24292F">        ignore: [</span><span style="color:#0A3069">&#x27;after-comment&#x27;</span><span style="color:#24292F">],</span></span>
+<span class="line"><span style="color:#24292F">        ignoreAtRules: [</span><span style="color:#0A3069">&#x27;import&#x27;</span><span style="color:#24292F">],</span></span>
+<span class="line"><span style="color:#24292F">      },</span></span>
+<span class="line"><span style="color:#24292F">    ],</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;at-rule-name-case&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;lower&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;at-rule-name-newline-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always-multi-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;at-rule-name-space-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;at-rule-semicolon-newline-after&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;at-rule-semicolon-space-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Comment</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;comment-empty-line-before&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;comment-whitespace-inside&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;always&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// General / Sheet</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;indentation&#x27;</span><span style="color:#24292F">: [</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0550AE">2</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      {</span></span>
+<span class="line"><span style="color:#24292F">        baseIndentLevel: </span><span style="color:#0550AE">1</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      },</span></span>
+<span class="line"><span style="color:#24292F">    ],</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;linebreaks&#x27;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;unix&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;max-empty-lines&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">2</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;max-line-length&#x27;: false,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;no-eol-whitespace&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;no-missing-end-of-source-newline&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;no-empty-first-line&#x27;</span><span style="color:#24292F">: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// &#x27;unicode-bom&#x27;: false,</span></span>
+<span class="line"> </span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">/**</span></span>
+<span class="line"><span style="color:#6E7781">     *  stylelint-order</span></span>
+<span class="line"><span style="color:#6E7781">     *  https://github.com/hudochenkov/stylelint-order</span></span>
+<span class="line"><span style="color:#6E7781">    */</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;order/order&#x27;</span><span style="color:#24292F">: [</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0A3069">&#x27;custom-properties&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0A3069">&#x27;dollar-variables&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0A3069">&#x27;at-variables&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0A3069">&#x27;less-mixins&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      {</span></span>
+<span class="line"><span style="color:#24292F">        type: </span><span style="color:#0A3069">&#x27;at-rule&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">        name: </span><span style="color:#0A3069">&#x27;include&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">        hasBlock: </span><span style="color:#0550AE">false</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      },</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0A3069">&#x27;declarations&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      {</span></span>
+<span class="line"><span style="color:#24292F">        type: </span><span style="color:#0A3069">&#x27;at-rule&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">        hasBlock: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">      },</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#0A3069">&#x27;rules&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    ],</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;order/properties-order&#x27;</span><span style="color:#24292F">: [</span></span>
+<span class="line"><span style="color:#24292F">      [</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span><span style="color:#0A3069">&#x27;all&#x27;</span><span style="color:#24292F">],</span></span>
+<span class="line"><span style="color:#24292F">        },</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// Position</span></span>
+<span class="line"><span style="color:#24292F">          noEmptyLineBetween: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          emptyLineBefore: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;position&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;inset&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;inset-block&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;inset-inline&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;top&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;right&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;bottom&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;left&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;z-index&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          ],</span></span>
+<span class="line"><span style="color:#24292F">        },</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// Display mode</span></span>
+<span class="line"><span style="color:#24292F">          noEmptyLineBetween: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          emptyLineBefore: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;box-sizing&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;display&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          ],</span></span>
+<span class="line"><span style="color:#24292F">        },</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// Flexible boxes.</span></span>
+<span class="line"><span style="color:#24292F">          noEmptyLineBetween: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          emptyLineBefore: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;flex&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;flex-basis&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;flex-direction&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;flex-flow&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;flex-grow&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;flex-shrink&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;flex-wrap&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          ],</span></span>
+<span class="line"><span style="color:#24292F">        },</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// Grid layout.</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-area&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-template&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-template-areas&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-template-rows&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-template-columns&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-row&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-row-start&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-row-end&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-column&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-column-start&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-column-end&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-auto-rows&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-auto-columns&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-auto-flow&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-gap&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-row-gap&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;grid-column-gap&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          ],</span></span>
+<span class="line"><span style="color:#24292F">        },</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// Gap.</span></span>
+<span class="line"><span style="color:#24292F">          noEmptyLineBetween: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          emptyLineBefore: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;gap&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;row-gap&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;column-gap&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          ],</span></span>
+<span class="line"><span style="color:#24292F">        },</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// Layout alignment.</span></span>
+<span class="line"><span style="color:#24292F">          noEmptyLineBetween: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          emptyLineBefore: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;place-content&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;place-items&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;place-self&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;align-content&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;align-items&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;align-self&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;justify-content&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;justify-items&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;justify-self&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          ],</span></span>
+<span class="line"><span style="color:#24292F">        },</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// Order</span></span>
+<span class="line"><span style="color:#24292F">          noEmptyLineBetween: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          emptyLineBefore: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;order&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          ],</span></span>
+<span class="line"><span style="color:#24292F">        },</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// Box model</span></span>
+<span class="line"><span style="color:#24292F">          noEmptyLineBetween: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          emptyLineBefore: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;float&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;width&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;min-width&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;max-width&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;height&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;min-height&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;max-height&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;padding&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;padding-top&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;padding-right&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;padding-bottom&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;padding-left&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;margin&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;margin-top&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;margin-right&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;margin-bottom&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;margin-left&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;overflow&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;overflow-x&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;overflow-y&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;-webkit-overflow-scrolling&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;-ms-overflow-x&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;-ms-overflow-y&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;-ms-overflow-style&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;overscroll-behavior&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;overscroll-behavior-x&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;overscroll-behavior-y&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;overscroll-behavior-inline&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;overscroll-behavior-block&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;clip&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;clip-path&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;clear&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          ],</span></span>
+<span class="line"><span style="color:#24292F">        },</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// Typography</span></span>
+<span class="line"><span style="color:#24292F">          noEmptyLineBetween: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          emptyLineBefore: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-family&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-size&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-style&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-weight&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-feature-settings&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-kerning&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-variant&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-variant-ligatures&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-variant-caps&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-variant-alternates&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-variant-numeric&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-variant-east-asian&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-variant-position&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-size-adjust&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-stretch&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-effect&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-emphasize&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-emphasize-position&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-emphasize-style&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;-webkit-font-smoothing&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;-moz-osx-font-smoothing&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;font-smooth&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;hyphens&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;line-height&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;color&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-align&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-align-last&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-emphasis&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-emphasis-color&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-emphasis-style&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-emphasis-position&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-decoration&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-decoration-line&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-decoration-thickness&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-decoration-style&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-decoration-color&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-underline-position&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-underline-offset&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-indent&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-justify&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-outline&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;-ms-text-overflow&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-overflow&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-overflow-ellipsis&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-overflow-mode&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-shadow&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-transform&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-wrap&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;-webkit-text-size-adjust&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;-ms-text-size-adjust&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;letter-spacing&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;word-break&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;word-spacing&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;word-wrap&#x27;</span><span style="color:#24292F">, </span><span style="color:#6E7781">// Legacy name for `overflow-wrap`</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;overflow-wrap&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;tab-size&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;white-space&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;vertical-align&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;list-style&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;list-style-position&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;list-style-type&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;list-style-image&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          ],</span></span>
+<span class="line"><span style="color:#24292F">        },</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// Accessibility &amp; Interactions.</span></span>
+<span class="line"><span style="color:#24292F">          noEmptyLineBetween: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          emptyLineBefore: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;pointer-events&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;-ms-touch-action&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;touch-action&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;cursor&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;visibility&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;zoom&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;table-layout&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;empty-cells&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;caption-side&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-spacing&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-collapse&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;content&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;quotes&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;counter-reset&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;counter-increment&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;resize&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;user-select&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;nav-index&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;nav-up&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;nav-right&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;nav-down&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;nav-left&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          ],</span></span>
+<span class="line"><span style="color:#24292F">        },</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// Background &amp; Borders.</span></span>
+<span class="line"><span style="color:#24292F">          noEmptyLineBetween: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          emptyLineBefore: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;background&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;background-color&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;background-image&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;-ms-filter:</span><span style="color:#0550AE">\\\&#x27;</span><span style="color:#0A3069">progid:DXImageTransform.Microsoft.gradient&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;filter:progid:DXImageTransform.Microsoft.gradient&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;filter&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;background-repeat&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;background-attachment&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;background-position&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;background-position-x&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;background-position-y&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;background-clip&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;background-origin&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;background-size&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;background-blend-mode&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;isolation&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-color&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-style&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-width&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-top&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-top-color&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-top-style&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-top-width&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-right&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-right-color&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-right-style&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-right-width&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-bottom&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-bottom-color&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-bottom-style&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-bottom-width&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-left&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-left-color&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-left-style&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-left-width&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-radius&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-top-left-radius&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-top-right-radius&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-bottom-right-radius&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-bottom-left-radius&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-image&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-image-source&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-image-slice&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-image-width&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-image-outset&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;border-image-repeat&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;outline&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;outline-width&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;outline-style&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;outline-color&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;outline-offset&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;box-shadow&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;mix-blend-mode&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;-ms-filter:</span><span style="color:#0550AE">\\\&#x27;</span><span style="color:#0A3069">progid:DXImageTransform.Microsoft.Alpha&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;opacity&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;-ms-interpolation-mode&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          ],</span></span>
+<span class="line"><span style="color:#24292F">        },</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// SVG Presentation Attributes.</span></span>
+<span class="line"><span style="color:#24292F">          noEmptyLineBetween: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          emptyLineBefore: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;alignment-baseline&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;baseline-shift&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;dominant-baseline&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;text-anchor&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;word-spacing&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;writing-mode&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;fill&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;fill-opacity&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;fill-rule&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;stroke&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;stroke-dasharray&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;stroke-dashoffset&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;stroke-linecap&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;stroke-linejoin&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;stroke-miterlimit&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;stroke-opacity&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;stroke-width&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;color-interpolation&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;color-interpolation-filters&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;color-profile&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;color-rendering&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;flood-color&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;flood-opacity&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;image-rendering&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;lighting-color&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;marker-start&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;marker-mid&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;marker-end&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;mask&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;shape-rendering&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;stop-color&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;stop-opacity&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          ],</span></span>
+<span class="line"><span style="color:#24292F">        },</span></span>
+<span class="line"><span style="color:#24292F">        {</span></span>
+<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// Transitions &amp; Animation.</span></span>
+<span class="line"><span style="color:#24292F">          noEmptyLineBetween: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          emptyLineBefore: </span><span style="color:#0A3069">&#x27;never&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          properties: [</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;transition&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;transition-delay&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;transition-timing-function&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;transition-duration&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;transition-property&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;transform&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;transform-origin&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;animation&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;animation-name&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;animation-duration&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;animation-play-state&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;animation-timing-function&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;animation-delay&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;animation-iteration-count&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">            </span><span style="color:#0A3069">&#x27;animation-direction&#x27;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">          ],</span></span>
+<span class="line"><span style="color:#24292F">        }],</span></span>
+<span class="line"><span style="color:#24292F">    ],</span></span>
+<span class="line"><span style="color:#24292F">  },</span></span>
+<span class="line"><span style="color:#24292F">};</span></span>
+<span class="line"> </span>
+<span class="line"> </span></code></pre></div></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/linters/stylelint","query":{},"buildId":"JkuK93bYLSZLzVCmJQyhb","assetPrefix":"/code-style-pub","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
