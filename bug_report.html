@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/code-style-pub/_next/static/css/38abdf5bcdd7d32e.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/38abdf5bcdd7d32e.css" data-n-g=""/><link rel="preload" href="/code-style-pub/_next/static/css/0360a6c0cd94e8a7.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/0360a6c0cd94e8a7.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/code-style-pub/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/code-style-pub/_next/static/chunks/webpack-62d0f791987683bd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/framework-fe99aa755573eedd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/main-5204d7fdcf7c3712.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/_app-e17786fcc1a3f2d6.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/573-38b5de67e3c6f644.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/bug_report-4a7dfc8c817c96fa.js" defer=""></script><script src="/code-style-pub/_next/static/dtnT2dTdC1kuEUIufyMy1/_buildManifest.js" defer=""></script><script src="/code-style-pub/_next/static/dtnT2dTdC1kuEUIufyMy1/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="Layout_layout__3sqKB"><div class="Layout_layout__column__RP2Ig Layout_layout__column_left__x_wOT"><ul><li><a href="/code-style-pub">Main</a></li><li><a href="/code-style-pub#structure">Structure</a></li><li><a href="/code-style-pub#naming">Именование переменных</a></li><li><a href="/code-style-pub#common">Общее соглашение</a></li><li><a href="/code-style-pub#react">React</a></li><li><a href="/code-style-pub#ts">Typescript</a></li><li><a href="/code-style-pub/linters">Linters</a></li><li><a href="/code-style-pub/testing">(QA)Testing</a></li><li><a href="/code-style-pub/first_steps_for_tester">(QA)First steps for tester</a></li><li><a href="/code-style-pub/bug_report">(QA)Bug report</a></li><li><a href="/code-style-pub/checklist">(QA)Checklist</a></li></ul></div><div class="Layout_layout__column__RP2Ig Layout_layout__column_right__q2i04"><h1>Работа с баг репортом</h1>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/code-style-pub/_next/static/css/38abdf5bcdd7d32e.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/38abdf5bcdd7d32e.css" data-n-g=""/><link rel="preload" href="/code-style-pub/_next/static/css/0360a6c0cd94e8a7.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/0360a6c0cd94e8a7.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/code-style-pub/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/code-style-pub/_next/static/chunks/webpack-62d0f791987683bd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/framework-fe99aa755573eedd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/main-5204d7fdcf7c3712.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/_app-e17786fcc1a3f2d6.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/573-38b5de67e3c6f644.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/bug_report-5a305455eee80d2d.js" defer=""></script><script src="/code-style-pub/_next/static/eefHhARZajeykpR91Z1zF/_buildManifest.js" defer=""></script><script src="/code-style-pub/_next/static/eefHhARZajeykpR91Z1zF/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="Layout_layout__3sqKB"><div class="Layout_layout__column__RP2Ig Layout_layout__column_left__x_wOT"><ul><li><a href="/code-style-pub">Main</a></li><li><a href="/code-style-pub#structure">Structure</a></li><li><a href="/code-style-pub#naming">Именование переменных</a></li><li><a href="/code-style-pub#common">Общее соглашение</a></li><li><a href="/code-style-pub#react">React</a></li><li><a href="/code-style-pub#ts">Typescript</a></li><li><a href="/code-style-pub/linters">Linters</a></li><li><a href="/code-style-pub/testing">(QA)Testing</a></li><li><a href="/code-style-pub/first_steps_for_tester">(QA)First steps for tester</a></li><li><a href="/code-style-pub/bug_report">(QA)Bug report</a></li><li><a href="/code-style-pub/checklist">(QA)Checklist</a></li></ul></div><div class="Layout_layout__column__RP2Ig Layout_layout__column_right__q2i04"><h1>Работа с баг репортом</h1>
 <p>Баг репорт (bug report) – это технический документ, который содержит в себе полное описание бага, включающее
 информацию как о самом баге (краткое описание, критичность, приоритет и т.д.), так и об условиях возникновения данного бага.</p>
 <h2>Поля баг репорта</h2>
@@ -6,18 +6,26 @@
 <pre><code>1. Summary(краткое описание)(что? где? при каких условиях?)
 2. Component(компонент приложения)
 3. Severity(серьёзность)
-4. Attachment(вложение)(cкриншот/видео)
-5*. Actual result(фактический результат)
-6*. Expected result(ожидаемый результат)
+4. Priority(приоритет)
+5. Attachment(вложение)(cкриншот/видео)
+6*. Actual result(фактический результат)
+7*. Expected result(ожидаемый результат)
   
 Другие характеристики опциональны.
 </code></pre>
+<p>Опциональные характеристики:</p>
+<pre><code>1. Environment(окружение)
+2. Steps to reproduce(шаги для воспроизведения)
+3. ID(идентификатор)
+4. Author(автор)
+5. Assigned to(назначен на)
+</code></pre>
 <p>Если необходимо, то тестировщик должен указать <code>окружение</code> на котором найден баг(ОС, браузер, конкретное разрешение или диапазон)</p>
-<div class="HighLight_highlight__Ug3iF HighLight_yellow__YJtR_"><div class="highlight__inner"><p>В исключительных случаях поле <code>Attachment(скриншот/видео)</code> может быть не заполнено при добавлении бага(баг указывает на проблему, которую
-не передать через видео или скриншот).</p><p>Например, отсутствует sitemap на prod версии сайта.</p></div></div>
+<div class="HighLight_highlight__Ug3iF HighLight_blue__1LHpt"><div class="highlight__inner"><p>В исключительных случаях поле <code>Attachment(скриншот/видео)</code> может быть не заполнено при добавлении бага(баг указывает на проблему, которую
+не передать через видео или скриншот).</p></div></div>
 <p>Также могут быть добавлены <code>Шаги для воспроизведения</code> бага, которые помогут разработчику воспроизвести описанный дефект.
 Шаги представляют собой набор последовательных действий, которые оформлены в виде списка, и выполняются в заданной очередности.</p>
-<pre><code>Идентификатор(номер) бага зачастую прописывается автоматически(в зависимости от используемой баг трекинроговой системы).
+<pre><code>Идентификатор(номер) и автор бага зачастую прописывается автоматически(в зависимости от используемой баг трекинроговой системы).
 </code></pre>
 <h2>Статусы в баг репорте</h2>
 <p>Все возможные статусы, которые могут быть использованы при работе с баг репортом:</p>
@@ -28,8 +36,7 @@
 5. Fixed on dev
 6. Fixed on prod
 7. Fixed
-8. Not bug
-9. Backlog
+8. Backlog
 </code></pre>
 <h3>Порядок выставление статусов и их предназначение</h3>
 <p>Каждый новый баг заносится в баг репорт соответствующего проекта со статусом <code>New</code>.</p>
@@ -46,8 +53,6 @@
 <p>В случае успешной починки бага и его проверке, тестировщик может выставить статус <code>Fixed</code>. Такой статус выставляется,
 если баг был исправлен при первоначальной разработке, когда основные изменения проходят на dev сервере или если баг исправлен
 на prod сервере в качестве хотфикса.</p>
-<p>Статус <code>Not bug</code> выставляется разработчиком в случае, если найденный баг не является таковым и описание в баге
-является корректным поведением системы.</p>
 <p>Баг может быть добавлен в <code>Backlog</code>. Статус <code>Backlog</code> используется в случае:</p>
 <ol>
 <li>Если клиент решил отложить починку бага на неопределенный срок. Починка таких багов может производиться пачками в определенно
@@ -106,18 +111,10 @@
 может иметь серьёзность Trivial и приоритет Low.</p>
 <div class="HighLight_highlight__Ug3iF HighLight_blue__1LHpt"><div class="highlight__inner"><p>При выставлении приоритетов и степени серьёзности багов, нужно всегда обращать внимание на цели проекта, его сроки, требования и
 другие факторы.</p></div></div>
-<p>Пример 1 (todo)</p>
-<p>Баг: &quot;То-то-то-то&quot;</p>
+<p>(to do)</p>
 <p>Лендинг: сер и приор</p>
-<p>Админ. панель: сер и приор</p>
-<p>Интер. магазин: сер и приор</p>
-<p>Польз. система: сер и приор</p>
-<p>Пример 2 (todo)</p>
-<p>Баг: &quot;То-то-то-то&quot;</p>
-<p>Лендинг: сер и приор</p>
-<p>Админ. панель: сер и приор</p>
-<p>Интер. магазин: сер и приор</p>
-<p>Польз. система: сер и приор</p>
+<p>Админ. панель, CMS: сер и приор</p>
+<p>Saas: сер и приор</p>
 <p><em>Примеры</em></p>
 <pre><code>  Trivial/High: &quot;Опечатка в названии компании на главной странице продукта&quot;. - не касается бизнес логики приложения, 
   исправить легко(поэтому Trivial), но нужно исправить как можно быстрее, т.к. серьёзно влияет на общее впечатление
@@ -145,4 +142,4 @@
 <div class="HighLight_highlight__Ug3iF HighLight_red__mlLDm"><div class="highlight__inner"><p>Пример <a href="https://ibb.co/4JrDvSb" target="_blank">плохого скриншота</a> по дефекту. Непонятно на какой странице находится пользователь и в каком элементе(-ах)
 на странице есть дефект</p></div></div>
 <p>По видео: желательно показывать дефект от начального шага до самого дефекта, чтобы было видно какие действия были сделаны
-пользователем для последующего воспроизведения бага разработчиком.</p></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/bug_report","query":{},"buildId":"dtnT2dTdC1kuEUIufyMy1","assetPrefix":"/code-style-pub","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
+пользователем для последующего воспроизведения бага разработчиком.</p></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/bug_report","query":{},"buildId":"eefHhARZajeykpR91Z1zF","assetPrefix":"/code-style-pub","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
