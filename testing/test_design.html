@@ -1,0 +1,75 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/code-style-pub/_next/static/css/37f43be7e45eb95a.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/37f43be7e45eb95a.css" data-n-g=""/><link rel="preload" href="/code-style-pub/_next/static/css/0360a6c0cd94e8a7.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/0360a6c0cd94e8a7.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/code-style-pub/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/code-style-pub/_next/static/chunks/webpack-62d0f791987683bd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/framework-fe99aa755573eedd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/main-5204d7fdcf7c3712.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/_app-e17786fcc1a3f2d6.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/146-e65c683d46926b8e.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/testing/test_design-61e01ea2fd1c0554.js" defer=""></script><script src="/code-style-pub/_next/static/Vp0PtwS6Q_485OmhTTLnG/_buildManifest.js" defer=""></script><script src="/code-style-pub/_next/static/Vp0PtwS6Q_485OmhTTLnG/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="Layout_layout__3sqKB"><div class="Layout_layout__column__RP2Ig Layout_layout__column_left__x_wOT"><ul><li><a href="/code-style-pub">Главная</a></li><li><a href="/code-style-pub/testing">Testing</a></li><li><a href="/code-style-pub/testing/first_steps_for_tester">First steps for tester</a></li><li><a href="/code-style-pub/testing/bug_report">Bug report</a></li><li><a href="/code-style-pub/testing/checklist">Checklist</a></li><li><a href="/code-style-pub/testing/test_design">Test Design</a></li></ul></div><div class="Layout_layout__column__RP2Ig Layout_layout__column_right__q2i04"><h1>Техники тест дизайна</h1>
+<p>Техники тест-дизайна — это правила и подходы, которые помогают создавать грамотные тест-кейсы.</p>
+<p>Рассмотрим самые популярные и часто встречающиеся техники, которые могут пригодиться нам на проектах.</p>
+<h2>Эквивалентное разбиение</h2>
+<p>Метод эквивалентного разбиения позволяет минимизировать число тестов, не создавая сценарий для каждого возможного значения,
+а выбрав только одно значение из целого класса и приняв за аксиому, что для всех значений в данной группе результат будет аналогичным.</p>
+<p>Пример</p>
+<pre><code>Мы тестируем функциональность приложения, позволяющего покупать авиа- и железнодорожные билеты онлайн.
+Стоимость билета будет зависеть от возраста пассажира, так как дети, студенты и пенсионеры относятся ко льготным категориям.
+
+У нас есть четыре возрастных группы: младше 15 лет, от 15 до 25 лет, старше 25 и младше 60 лет и люди старше 60.
+При этом, в поле для ввода возраста помещается всего два символа, поэтому указать возраст более 99 лет технически невозможно.
+
+QA-специалисту не нужно писать 99 тестов для каждого возраста, хватит пяти: по одному для каждой возрастной группы
+(скажем, 10, 18, 35 и 75 лет) и один для случая, если возраст человека превышает 99 лет. Да, последний тест на практике
+невыполним (поскольку в поле возраста невозможно ввести более двух знаков), и все же не следует забывать об этой проверке.
+</code></pre>
+<a href="https://share.getcloudapp.com/P8u7z7Dj" target="_blank">Наглядный пример</a>
+<h2>Граничные значения</h2>
+<p>Техника граничных значений основана на предположении, что большинство ошибок может возникнуть на границах эквивалентных классов.
+Она тесно связана с вышеописанной техникой эквивалентного разбиения, из-за чего часто используется с ней в паре.</p>
+<p>Пример</p>
+<pre><code>Для примера из предыдущего пункта границами будут являться значения 0, 15, 25, 60 и 99.
+Граничными значениями будут 0, 1, 14, 15, 16, 24, 25, 26, 59, 60, 61, 98, 99, 100.
+</code></pre>
+<a href="https://share.getcloudapp.com/YEuWYW4J" target="_blank">Наглядный пример</a>
+<h2>Таблица принятия решений</h2>
+<p>Другое название метода – матрица принятия решений. Эта техника подходит для более сложных систем, например – двухфакторной аутентификации.</p>
+<p>Пример</p>
+<pre><code>Предположим, чтобы войти в систему, пользователю нужно ввести сначала логин и пароль, а затем еще подтвердить свою личность присланным в смс кодом.
+
+Какие возможны сценарии:
+1. Правильный логин и правильный пароль.
+2. Правильный логин, неправильный пароль.
+3. Неправильный логин, правильный пароль.
+4. Неправильный логин, неправильный пароль.
+
+Первый из этих сценариев сопровождается либо правильным, либо неправильным вводом смс-кода, итого у нас получается 5 тестов. 
+При этом только один из сценариев приведет к положительному результату (пользователь успешно авторизуется), а остальные закончатся неудачей.
+
+Однако, может быть так, что система выдает разные сообщения в зависимости от того, на каком этапе была допущена ошибка, 
+скажем: invalid login, invalid password. Соответственно, групп потребуется больше, а таблица станет обширнее.
+
+Этот метод хорош тем, что он показывает сразу все возможные сценарии в форме, понятной даже неспециалисту.
+</code></pre>
+<a href="https://share.getcloudapp.com/d5unkngl" target="_blank">Пример таблицы принятия решений</a>
+<h2>Попарное тестирование(дополнить)</h2>
+<p>Суть этого метода в том, что каждое значение каждого проверяемого параметра должно быть протестировано на взаимодействие
+с каждым значением всех остальных параметров. После составления такой матрицы мы убираем тесты, которые дублируют друг друга,
+оставляя максимальное покрытие при минимальном необходимом наборе сценариев.</p>
+<p>Попарное тестирование позволяет обнаружить максимум ошибок без избыточных проверок.</p>
+<p>Пример</p>
+<pre><code>Достаточно, чтобы каждое значение всех параметров хотя бы единожды сочеталось с другими значениями остальных параметров. 
+Таким образом, матрицу можно значительно сократить. Например:
+
+№ -&gt; Браузер -&gt; Операционная система -&gt; Язык
+1. Opera Windows RU
+2. Google Chrome Linux RU
+3. Opera Linux EN
+4. Google Chrome Windows EN
+
+(!) При составлении матрицы принятия решений для двух браузеров, двух ОС и двух языков было бы нужно 8 сценариев. При попарном тестировании достаточно четырех.
+
+</code></pre>
+<a href="https://share.getcloudapp.com/d5unknq0" target="_blank">Пример попарного тестирования</a>
+<p>(дополнить)</p>
+<p>Все это можно просчитать и вручную, но не обязательно – гораздо удобнее автоматизировать процесс.
+Для этого существует программа попарного независимого комбинированного тестирования – Pairwise Independent Combinatorial Testing (PICT).
+Для проведения тестирования специалист создает текстовый файл с перечислением и их возможных значений, а затем запускает PICT через cmd – командную строку.
+Скомбинированные тесты отображаются в виде таблицы в самой консоли. Так же результаты по желанию можно выгрузить в файл Excel.</p>
+<p>Пример содержимого файла для программы PICT:</p>
+<p>Браузер: Chrome, Opera</p>
+<p>ОС: Windows, Linux</p>
+<p>Язык: RU, ENG</p>
+<p>__</p></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/testing/test_design","query":{},"buildId":"Vp0PtwS6Q_485OmhTTLnG","assetPrefix":"/code-style-pub","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
