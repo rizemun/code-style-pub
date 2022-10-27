@@ -1,0 +1,105 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/code-style-pub/_next/static/css/37f43be7e45eb95a.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/37f43be7e45eb95a.css" data-n-g=""/><link rel="preload" href="/code-style-pub/_next/static/css/392e3c8f86c3d459.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/392e3c8f86c3d459.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/code-style-pub/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/code-style-pub/_next/static/chunks/webpack-62d0f791987683bd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/framework-fe99aa755573eedd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/main-5204d7fdcf7c3712.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/_app-e17786fcc1a3f2d6.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/146-e65c683d46926b8e.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/testing/api_testing-cfe12874e07ed8f8.js" defer=""></script><script src="/code-style-pub/_next/static/QMHqIAZr9fa25JF-C4vQD/_buildManifest.js" defer=""></script><script src="/code-style-pub/_next/static/QMHqIAZr9fa25JF-C4vQD/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="Layout_layout__3sqKB"><div class="Layout_layout__column__RP2Ig Layout_layout__column_left__x_wOT"><ul><li><a href="/code-style-pub">Главная</a></li><li><a href="/code-style-pub/testing">Testing</a></li><li><a href="/code-style-pub/testing/first_steps_for_tester">First Steps For Tester</a></li><li><a href="/code-style-pub/testing/bug_report">Bug Report</a></li><li><a href="/code-style-pub/testing/checklist">Checklist</a></li><li><a href="/code-style-pub/testing/test_design">Test Design</a></li><li><a href="/code-style-pub/testing/api_testing">API Testing</a></li></ul></div><div class="Layout_layout__column__RP2Ig Layout_layout__column_right__q2i04"><h1>Тестирование API</h1>
+<p>Основные инструменты, которыми пользуется тестировщик при тестировании API - это Postman и API документация. Рассмотрим основные методы, статусы
+и особенности, на которые стоит обращать внимание при тестировании API.</p>
+<h2>Методы</h2>
+<details><summary>GET</summary><pre><code>GET-запрос — метод передачи данных от клиента к серверу с целью получения информации, указанной с помощью конкретных GET-параметров
+</code></pre></details>
+<details><summary>POST</summary><pre><code>Метод POST предназначен для направления запроса, при котором веб-сервер принимает данные, заключённые 
+в тело сообщения, для хранения. Он часто используется для загрузки файла или представления заполненной веб-формы
+</code></pre></details>
+<details><summary>PUT</summary><pre><code>Метод запроса PUT создаёт новый ресурс или заменяет представление целевого ресурса, данными представленными в теле запроса
+</code></pre></details>
+<details><summary>DELETE</summary><pre><code>Метод запроса DELETE удаляет указанный ресурс
+</code></pre></details>
+<pre><code>  Запрос GET передает данные в URL в виде пар &quot;имя-значение&quot; (другими словами, через ссылку), а запрос POST передает данные в теле запроса 
+  (подробно показано в примерах ниже).
+</code></pre>
+<h2>Популярные статусы</h2>
+<ol>
+<li>200 OK («хорошо»)</li>
+<li>201 Created («создано»)</li>
+<li>301 Moved Permanently («перемещено навсегда»)</li>
+<li>302 Moved Temporarily («перемещено временно»)</li>
+<li>400 Bad Request («неправильный, некорректный запрос»)</li>
+<li>404 Not Found («не найдено»)</li>
+<li>422 Unprocessable Entity («необрабатываемый экземпляр»)</li>
+<li>500 Internal Server Error («внутренняя ошибка сервера»)</li>
+<li>502 Bad Gateway («плохой, ошибочный шлюз»)</li>
+</ol>
+<h2>Postman</h2>
+<h3>Использование метода POST в Postman</h3>
+<p>POST-запросы используются для отправки новых данных на сервер. Рассмотрим пример отправки информации о новом пользователе в теле POST-запроса.</p>
+<ol>
+<li>Задаем тип запроса — POST</li>
+<li>Задаем request URL — https://jsonplaceholder.typicode.com/users</li>
+<li>Нажимаем на вкладку Body, выбираем «Raw» — JSON. Вставляем данные о пользователе из блока ниже:</li>
+</ol>
+<pre><code>{
+    &quot;id&quot;: 11,
+    &quot;name&quot;: &quot;QA eng&quot;,
+    &quot;username&quot;: &quot;tmtmOk&quot;,
+    &quot;email&quot;: &quot;user@site.com&quot;,
+    &quot;address&quot;: {
+      &quot;street&quot;: &quot;Gagarina&quot;,
+      &quot;suite&quot;: &quot;30&quot;,
+      &quot;city&quot;: &quot;Moscow&quot;,
+      &quot;zipcode&quot;: &quot;600008&quot;,
+      &quot;geo&quot;: {
+        &quot;lat&quot;: &quot;10.0000&quot;,
+        &quot;lng&quot;: &quot;80.0000&quot;
+      }
+    },
+    &quot;phone&quot;: &quot;1-2345-6-7890&quot;,
+    &quot;website&quot;: &quot;website.com&quot;,
+    &quot;company&quot;: {
+      &quot;name&quot;: &quot;website&quot;,
+      &quot;catchPhrase&quot;: &quot;website for QA engineers&quot;,
+      &quot;bs&quot;: &quot;real-time tutorials&quot;
+    }
+}
+</code></pre>
+<ol start="4">
+<li>После этого наживаем кнопку SEND и отправляем POST-запрос.</li>
+</ol>
+<p><img src="https://p-066764.f2.n0.cdn.getcloudapp.com/items/o0uX0Dry/036e6b3e-423e-41bc-ad18-f28073e7c6a7.jpeg?v=84f69788a542d815c3e219ba1620934c" alt="Пример запроса POST"/></p>
+<ol>
+<li>Вы увидите 201 Created message (как на скриншоте ниже), если запрос выполнился успешно.</li>
+<li>Данные, отправленные с помощью POST-запроса будут показаны во вкладке Body</li>
+</ol>
+<p><img src="https://p-066764.f2.n0.cdn.getcloudapp.com/items/2Nu7DXdP/8af18ce6-5409-4ab6-87f2-993dbec0171d.jpeg?v=b6eb608a1aee96005c0548ab79635037" alt="Пример ответа на POST"/></p>
+<div class="HighLight_highlight__Ug3iF HighLight_red__mlLDm"><div class="highlight__inner"><p>Во время тестирования, для каждого запроса проверяйте возвращаемый результат, код ответа сервера и время ответа сервера.
+И не забывайте про негативные тесты!</p></div></div>
+<h3>Задание переменных</h3>
+<p>Параметризация — одна из самых полезных особенностей Postman. Часто необходимо выполнить один и тот же запрос на разных наборах данных.
+С помощью параметризации, можно использовать переменные при выполнении запросов.</p>
+<p>В Postman, параметры создаются с помощью двойных скобок:</p>
+<pre><code>{{test}}
+</code></pre>
+<p>Например, base URL — https://www.website.com, мы сохраняем это значение в переменной с именем url.
+В этом случае мы можем обратиться к этой переменной из запроса, написав <code>{{url}}</code>. Для того, чтобы отправить запрос на этот URL, мы подставим эту
+переменную в запрос. Выглядеть это будет так: <code>{{url}}/get?customers=new</code>. Запрос будет отправлен на https://www.website.com/get?customers=new</p>
+<h3>Создание тестов в Postman</h3>
+<p>Тесты в Postman позволяют убедиться, что API работает так, как этого от него ожидают.</p>
+<p>Пример</p>
+<p>Шаг 1: Рассмотрим обычный GET-запрос на <code>https://jsonplaceholder.typicode.com/users</code> и переключаемся во вкладку Tests (Тесты).(URL https://jsonplaceholder.typicode.com/
+был записан в переменную <code>{{url}}</code>) В секции сниппетов нажимаем на сниппет «Status code: Code is 200».
+В окне теста появится скрипт. Этот скрипт будет проверять, что запрос возвращает код ответа 200.</p>
+<p><img src="https://i0.wp.com/testengineer.ru/wp-content/uploads/2021/08/gajd-po-testirovaniyu-v-postman-21.webp?resize=696%2C286&amp;ssl=1" alt="Шаг 1"/></p>
+<p>Шаг 2: Нажмите кнопку Send (Отправить). В нижней части окна вы увидите результат выполнения теста (в нашем случае он выполнился успешно).</p>
+<p><img src="https://i0.wp.com/testengineer.ru/wp-content/uploads/2021/08/gajd-po-testirovaniyu-v-postman-22.webp?resize=696%2C279&amp;ssl=1" alt="Шаг 2"/></p>
+<p>Шаг 3: Давайте добавим еще один тест. В этот тесте мы будем сравнивать полученный результат с ожидаемым. Чтобы это сделать,
+выбираем сниппет с названием «Response body:JSON value check». Давайте проверим, что пользователь с именем Leanne Graham имеет userid 1.</p>
+<p><img src="https://i0.wp.com/testengineer.ru/wp-content/uploads/2021/08/gajd-po-testirovaniyu-v-postman-23.webp?resize=696%2C193&amp;ssl=1" alt="Шаг 3"/></p>
+<p>Шаг 4: Заменим название теста на что-то более понятное: вместо «Your test name» напишем «Check if Leanne Graham has the userid 1».
+Также <code>заменим jsonData.value на jsonData[0].name</code> (т.к. jsonData представляет собой массив, а массивы начинаются с 0):</p>
+<p><img src="https://i0.wp.com/testengineer.ru/wp-content/uploads/2021/08/gajd-po-testirovaniyu-v-postman-24.webp?resize=696%2C193&amp;ssl=1" alt="Шаг 4"/></p>
+<p>Код теста будет выглядеть следующим образом:</p>
+<pre><code>pm.test(&quot;Check if user with id1 is Leanne Graham&quot;, function () {
+var jsonData = pm.response.json();
+pm.expect(jsonData[0].name).to.eql(&quot;Leanne Graham&quot;);
+});
+</code></pre>
+<p>Шаг 5: Нажимаем Send (Отправить)</p>
+<p><img src="https://i0.wp.com/testengineer.ru/wp-content/uploads/2021/08/gajd-po-testirovaniyu-v-postman-25.webp?resize=696%2C303&amp;ssl=1" alt="Шаг 5"/></p>
+<h2>Снифферы(дополнить)</h2>
+<p>test</p></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/testing/api_testing","query":{},"buildId":"QMHqIAZr9fa25JF-C4vQD","assetPrefix":"/code-style-pub","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
