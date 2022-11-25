@@ -1,1 +1,201 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/code-style-pub/_next/static/css/37f43be7e45eb95a.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/37f43be7e45eb95a.css" data-n-g=""/><link rel="preload" href="/code-style-pub/_next/static/css/41777a4920feb726.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/41777a4920feb726.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/code-style-pub/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/code-style-pub/_next/static/chunks/webpack-62d0f791987683bd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/framework-fe99aa755573eedd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/main-5204d7fdcf7c3712.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/_app-e17786fcc1a3f2d6.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/146-e65c683d46926b8e.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/backend-1e58631c1ed19829.js" defer=""></script><script src="/code-style-pub/_next/static/hje3WgGjzEYVke4b5SHEB/_buildManifest.js" defer=""></script><script src="/code-style-pub/_next/static/hje3WgGjzEYVke4b5SHEB/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="Layout_layout__3sqKB"><div class="Layout_layout__column__RP2Ig Layout_layout__column_left__x_wOT"><ul><li><a href="/code-style-pub">Главная</a></li></ul></div><div class="Layout_layout__column__RP2Ig Layout_layout__column_right__q2i04"><h2>Nothing to see here yet!</h2></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/backend","query":{},"buildId":"hje3WgGjzEYVke4b5SHEB","assetPrefix":"/code-style-pub","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/code-style-pub/_next/static/css/37f43be7e45eb95a.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/37f43be7e45eb95a.css" data-n-g=""/><link rel="preload" href="/code-style-pub/_next/static/css/b590c813bf36e2c8.css" as="style"/><link rel="stylesheet" href="/code-style-pub/_next/static/css/b590c813bf36e2c8.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/code-style-pub/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/code-style-pub/_next/static/chunks/webpack-62d0f791987683bd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/framework-fe99aa755573eedd.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/main-5204d7fdcf7c3712.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/_app-e17786fcc1a3f2d6.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/146-e65c683d46926b8e.js" defer=""></script><script src="/code-style-pub/_next/static/chunks/pages/backend-df4615c3d8391fb8.js" defer=""></script><script src="/code-style-pub/_next/static/Pey3ok0jtJ3wjb6vn5HYQ/_buildManifest.js" defer=""></script><script src="/code-style-pub/_next/static/Pey3ok0jtJ3wjb6vn5HYQ/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="Layout_layout__3sqKB"><div class="Layout_layout__column__RP2Ig Layout_layout__column_left__x_wOT"><ul><li><a href="/code-style-pub">Главная</a></li><li><a href="/code-style-pub/backend#constants">Константы, свойства, методы</a></li><li><a href="/code-style-pub/backend#constuctions">Конструкции языка</a></li></ul></div><div class="Layout_layout__column__RP2Ig Layout_layout__column_right__q2i04"><h1>Code style</h1>
+<h2>Файлы</h2>
+<ul>
+<li>PHP-код ОБЯЗАТЕЛЬНО следует заключать в полную версию (<strong><code>&lt;?php ?&gt;</code></strong>) тегов или укороченную (сокращённую запись echo) версию (<strong><code>&lt;?= ?&gt;</code></strong>) тегов и НЕДОПУСТИМО заключать ни в какие иные разновидности тегов.</li>
+<li>Закрывающий тег <strong><code>?&gt;</code></strong> ДОЛЖЕН отсутствовать в файлах, содержащих только PHP-код.</li>
+<li>Во всех файлах с PHP-кодом ДОЛЖЕН быть использован Unix-вариант переноса строк (Unix line feed, т.е. \n).</li>
+<li>В конце каждого файла с PHP-кодом ДОЛЖНА быть одна пустая строка.</li>
+<li>PHP-код ДОЛЖЕН быть представлен только в кодировке UTF-8 без BOM-байта.</li>
+<li>Расширение файлов с PHP-кодом ОБЯЗАТЕЛЬНО должно быть <strong><code>.php</code></strong></li>
+<li>Названия файлов с кодом и имена каталогов ДОЛЖНЫ быть в «<strong>StudlyCaps</strong>» (каждое слово начинается с большой буквы, между словами нет разделителей).</li>
+</ul>
+<h2>Строки кода</h2>
+<ul>
+<li>СЛЕДУЕТ стараться, чтобы длина строки кода составляла 120 символов или менее; более длинные строки СЛЕДУЕТ разбивать на несколько отдельных строк, длина каждой из которых не превышала бы 120 символов.</li>
+<li>В конце непустых строк НЕ ДОЛЖНО быть пробелов.</li>
+<li>Пустые строки МОГУТ быть добавлены в код для повышения удобочитаемости и разделения блоков кода.</li>
+<li>В одной строке НЕ ДОЛЖНО быть более одного выражения, заканчивающегося <strong>;</strong></li>
+</ul>
+<h2>Отступы</h2>
+<ul>
+<li>Для оформления отступов ДОЛЖНА использоваться табуляция.</li>
+</ul>
+<h2>Ключевые слова и константы true / false / null</h2>
+<ul>
+<li>Ключевые слова PHP ДОЛЖНЫ быть написаны в нижнем регистре.</li>
+<li>Константы PHP <strong>true</strong>, <strong>false</strong> и <strong>null</strong> ДОЛЖНЫ быть написаны в нижнем регистре.</li>
+</ul>
+<h2>Классы</h2>
+<ul>
+<li>Каждый класс должен располагаться в отдельном файле и в пространстве имён с хотя бы одним верхним уровнем (именем производителя).</li>
+<li>Под «классом» следует понимать также интерфейсы (interface) и примеси (trait).</li>
+<li>Имена классов ДОЛЖНЫ быть объявлены с использованием т.н. «<strong>StudlyCaps</strong>» (каждое слово начинается с большой буквы, между словами нет разделителей).</li>
+<li>Имя файла класса ДОЛЖНО совпадать с именем класса внутри.</li>
+<li>Ключевые слова extends и implements ДОЛЖНЫ находиться на той же строке, на которой находится имя класса.</li>
+<li>Открывающая фигурная скобка в определении класса ДОЛЖНА располагаться на текущей строке, а закрывающая фигурная скобка ДОЛЖНА располагаться на следующей строке после тела класса.</li>
+</ul>
+<div data-rehype-pretty-code-fragment=""><pre data-language="php" data-theme="default"><code data-language="php" data-theme="default"><span class="line"><span style="color:#CF222E">&lt;?</span><span style="color:#0550AE">php</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:#CF222E">class</span><span style="color:#24292F"> </span><span style="color:#953800">Bar</span><span style="color:#24292F"> </span><span style="color:#CF222E">extends</span><span style="color:#24292F"> </span><span style="color:#0550AE">Foo</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">//код</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<h2>Пространства имён</h2>
+<ul>
+<li>В случае наличия определения пространства имён, после него ДОЛЖНА располагаться одна пустая строка.</li>
+<li>В случае наличия импорта пространств имён, он ДОЛЖЕН располагаться после определения пространства имён.</li>
+<li>В случае наличия require, он должен располагаться после импорта пространств имён.</li>
+<li>При реализации импорта каждое пространство имён ДОЛЖНО импортироваться отдельно (со своим ключевым словом use).</li>
+<li>После блока импорта ДОЛЖНА быть одна пустая строка.</li>
+</ul>
+<div data-rehype-pretty-code-fragment=""><pre data-language="php" data-theme="default"><code data-language="php" data-theme="default"><span class="line"><span style="color:#CF222E">&lt;?</span><span style="color:#0550AE">php</span></span>
+<span class="line"><span style="color:#24292F"> </span></span>
+<span class="line"><span style="color:#CF222E">namespace</span><span style="color:#24292F"> </span><span style="color:#953800">Vendor\Package</span><span style="color:#24292F">;</span></span>
+<span class="line"><span style="color:#24292F"> </span></span>
+<span class="line"><span style="color:#CF222E">use</span><span style="color:#24292F"> </span><span style="color:#0550AE">FooClass</span><span style="color:#24292F">;</span></span>
+<span class="line"><span style="color:#CF222E">use</span><span style="color:#24292F"> </span><span style="color:#0550AE">BarClass</span><span style="color:#24292F"> </span><span style="color:#CF222E">as</span><span style="color:#24292F"> </span><span style="color:#0550AE">Bar</span><span style="color:#24292F">;</span></span>
+<span class="line"><span style="color:#CF222E">use</span><span style="color:#24292F"> </span><span style="color:#0550AE">OtherVendor\OtherPackage\BazClass</span><span style="color:#24292F">;</span></span>
+<span class="line"><span style="color:#24292F"> </span></span>
+<span class="line"><span style="color:#6E7781">// ... далее следует PHP-код ...</span></span></code></pre></div>
+<h2>Константы<a name="constants"></a></h2>
+<ul>
+<li>Константы классов ДОЛЖНЫ быть объявлены в верхнем регистре с использованием символа подчёркивания в качестве разделителя слов, например</li>
+</ul>
+<div data-rehype-pretty-code-fragment=""><pre data-language="php" data-theme="default"><code data-language="php" data-theme="default"><span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">VERSION</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;1.0&#x27;</span><span style="color:#24292F">;</span></span>
+<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">DATE_APPROVED</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;2012-06-01&#x27;</span><span style="color:#24292F">;</span></span></code></pre></div>
+<h2>Свойства</h2>
+<ul>
+<li>Свойства ДОЛЖНЫ именоваться в &quot;<strong>under_score</strong>&quot; (английские слова в идентификаторах разделяются подчеркиваниями).</li>
+</ul>
+<div data-rehype-pretty-code-fragment=""><pre data-language="php" data-theme="default"><code data-language="php" data-theme="default"><span class="line"><span style="color:#CF222E">private</span><span style="color:#24292F"> $database_name;</span></span></code></pre></div>
+<ul>
+<li>Область видимости ДОЛЖНА быть явно указана для каждого свойства.</li>
+<li>СЛЕДУЕТ использовать как можно более закрытые модификаторы доступа (желательно не использовать <strong>public</strong>).</li>
+<li>При определении свойства НЕ ДОЛЖНО применяться ключевое слово <strong>var</strong>.</li>
+<li>В одном выражении НЕ ДОЛЖНО быть определено более одного свойства.</li>
+<li>Одиночный знак подчёркивания в начале имени свойства НЕ СЛЕДУЕТ использовать как признак защищённой (<strong>protected</strong>) или приватной (<strong>private</strong>) области видимости.</li>
+</ul>
+<h2>Методы</h2>
+<ul>
+<li>Имена методов ДОЛЖНЫ быть объявлены с использованием т.н. «<strong>camelCase</strong>» (первое слово пишется в нижнем регистре, далее каждое слово начинается с большой буквы, а между словами нет разделителей).</li>
+</ul>
+<div data-rehype-pretty-code-fragment=""><pre data-language="php" data-theme="default"><code data-language="php" data-theme="default"><span class="line"><span style="color:#CF222E">private</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">debugInfo</span><span style="color:#24292F">(int param1, string param1,stringparam2 = &#x27;default&#x27;) </span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#CF222E">int</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">//PHP-код</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<ul>
+<li>Область видимости ДОЛЖНА быть явно указана для каждого метода.</li>
+<li>Одиночный знак подчёркивания в начале имени метода НЕ СЛЕДУЕТ использовать как признак защищённой (<strong>protected</strong>) или приватной (<strong>private</strong>) области видимости.</li>
+<li>СЛЕДУЕТ стараться использовать как можно более закрытые модификаторы доступа.</li>
+<li>После имени метода НЕ ДОЛЖНО быть пробела. Открывающая фигурная скобка ДОЛЖНА находиться на текущей строке, а закрывающая фигурная скобка ДОЛЖНА находиться на следующей за телом метода строке.</li>
+<li>В списке аргументов методов НЕ ДОЛЖНО быть пробела перед запятыми, но ДОЛЖЕН быть пробел после каждой запятой.</li>
+<li>Аргументы со значениями по умолчанию ДОЛЖНЫ располагаться в конце списка (после аргументов без значений по умолчанию).</li>
+<li>Ключевые слова <strong>abstract</strong> и <strong>final</strong>, в случае их наличия, ДОЛЖНЫ располагаться перед указанием области видимости.</li>
+<li>Ключевое слово <strong>static</strong>, в случае его наличия, ДОЛЖНО располагаться после указания области видимости.</li>
+<li>В коде вызова функций и методов НЕ ДОЛЖНО быть пробела между именем функции или метода и открывающей круглой скобкой, НЕ ДОЛЖНО быть пробела после открывающей круглой скобки, НЕ ДОЛЖНО быть пробела перед закрывающей круглой скобкой.</li>
+<li>В списке аргументов НЕ ДОЛЖНО быть пробелов перед запятыми, но ДОЛЖЕН быть пробел после каждой запятой.</li>
+<li>Список аргументов МОЖЕТ быть разделён на несколько строк, каждая из которых дополнена слева одним отступом. В таком случае первый элемент списка аргументов ДОЛЖЕН начинаться с новой строки, и в каждой строке ДОЛЖЕН быть указан только один аргумент.</li>
+<li>Желательно указывать типы параметров и возвращаемого значения</li>
+</ul>
+<h2>Конструкции if, elseif и else<a name="constuctions"></a></h2>
+<ul>
+<li>Конструкция <strong>if</strong> выглядит следующим образом. Обратите внимание на круглые скобки, пробелы и фигурные скобки, а также на тот факт, что слова <strong>else</strong> и <strong>elseif</strong> располагаются в той же строке, что и закрывающая фигурная скобка предшествующего тела конструкции.</li>
+<li>Ключевое слово <strong>elseif</strong> СЛЕДУЕТ использовать вместо отдельного сочетания <strong>else</strong> и <strong>if</strong>. Так конструкция будет представлять собой одно слово.</li>
+</ul>
+<div data-rehype-pretty-code-fragment=""><pre data-language="php" data-theme="default"><code data-language="php" data-theme="default"><span class="line"><span style="color:#CF222E">&lt;?</span><span style="color:#0550AE">php</span></span>
+<span class="line"><span style="color:#24292F"> </span></span>
+<span class="line"><span style="color:#CF222E">if</span><span style="color:#24292F"> ($expr1) {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// тело if</span></span>
+<span class="line"><span style="color:#24292F">} </span><span style="color:#CF222E">elseif</span><span style="color:#24292F"> ($expr2) {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// тело elseif</span></span>
+<span class="line"><span style="color:#24292F">} </span><span style="color:#CF222E">else</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// тело else</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<h2>Конструкции switch и case</h2>
+<ul>
+<li>Конструкция <strong>switch</strong> выглядит следующим образом. Обратите внимание на круглые скобки, пробелы и фигурные скобки. Выражение case ДОЛЖНО быть смещено на один отступ от <strong>switch</strong>, а ключевое слово <strong>break</strong> (или иное слово, обозначающее выход из конструкции) ДОЛЖНО располагаться на том же уровне отступов, что и тело <strong>case</strong>. В том случае, когда в непустом теле case умышленно не используется <strong>break</strong>, ДОЛЖЕН быть комментарий в стиле // no break.</li>
+</ul>
+<div data-rehype-pretty-code-fragment=""><pre data-language="php" data-theme="default"><code data-language="php" data-theme="default"><span class="line"><span style="color:#CF222E">&lt;?</span><span style="color:#0550AE">php</span></span>
+<span class="line"><span style="color:#24292F"> </span></span>
+<span class="line"><span style="color:#CF222E">switch</span><span style="color:#24292F"> ($expr) {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">case</span><span style="color:#24292F"> </span><span style="color:#0550AE">0</span><span style="color:#24292F">:</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#0550AE">echo</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;First case, with a break&#x27;</span><span style="color:#24292F">;</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#CF222E">break</span><span style="color:#24292F">;</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">case</span><span style="color:#24292F"> </span><span style="color:#0550AE">1</span><span style="color:#24292F">:</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#0550AE">echo</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;Second case, which falls through&#x27;</span><span style="color:#24292F">;</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// no break</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">case</span><span style="color:#24292F"> </span><span style="color:#0550AE">2</span><span style="color:#24292F">:</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">case</span><span style="color:#24292F"> </span><span style="color:#0550AE">3</span><span style="color:#24292F">:</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">case</span><span style="color:#24292F"> </span><span style="color:#0550AE">4</span><span style="color:#24292F">:</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#0550AE">echo</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;Third case, return instead of break&#x27;</span><span style="color:#24292F">;</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#CF222E">return</span><span style="color:#24292F">;</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">default</span><span style="color:#24292F">:</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#0550AE">echo</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;Default case&#x27;</span><span style="color:#24292F">;</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#CF222E">break</span><span style="color:#24292F">;</span></span>
+<span class="line"><span style="color:#24292F">}</span></span>
+<span class="line"> </span></code></pre></div>
+<h2>Конструкции while и do while</h2>
+<ul>
+<li>Конструкция <strong>while</strong> выглядит следующим образом. Обратите внимание на круглые скобки, пробелы и фигурные скобки.</li>
+</ul>
+<div data-rehype-pretty-code-fragment=""><pre data-language="php" data-theme="default"><code data-language="php" data-theme="default"><span class="line"><span style="color:#CF222E">&lt;?</span><span style="color:#0550AE">php</span></span>
+<span class="line"><span style="color:#24292F"> </span></span>
+<span class="line"><span style="color:#CF222E">while</span><span style="color:#24292F"> ($expr) {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// тело конструкции</span></span>
+<span class="line"><span style="color:#24292F">}</span></span>
+<span class="line"> </span></code></pre></div>
+<ul>
+<li>Соответственно, конструкция <strong>do while</strong> выглядит следующим образом. Обратите внимание на круглые скобки, пробелы и фигурные скобки.</li>
+</ul>
+<div data-rehype-pretty-code-fragment=""><pre data-language="php" data-theme="default"><code data-language="php" data-theme="default"><span class="line"><span style="color:#CF222E">&lt;?</span><span style="color:#0550AE">php</span></span>
+<span class="line"><span style="color:#24292F"> </span></span>
+<span class="line"><span style="color:#CF222E">do</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// тело конструкции</span></span>
+<span class="line"><span style="color:#24292F">} </span><span style="color:#CF222E">while</span><span style="color:#24292F"> ($expr);</span></span>
+<span class="line"> </span></code></pre></div>
+<h2>Конструкция for</h2>
+<ul>
+<li>Конструкция <strong>for</strong> выглядит следующим образом. Обратите внимание на круглые скобки, пробелы и фигурные скобки.</li>
+</ul>
+<div data-rehype-pretty-code-fragment=""><pre data-language="php" data-theme="default"><code data-language="php" data-theme="default"><span class="line"><span style="color:#CF222E">&lt;?</span><span style="color:#0550AE">php</span></span>
+<span class="line"><span style="color:#24292F"> </span></span>
+<span class="line"><span style="color:#CF222E">for</span><span style="color:#24292F"> ($i </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0550AE">0</span><span style="color:#24292F">; $i </span><span style="color:#CF222E">&lt;</span><span style="color:#24292F"> </span><span style="color:#0550AE">10</span><span style="color:#24292F">; $i</span><span style="color:#CF222E">++</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// тело for</span></span>
+<span class="line"><span style="color:#24292F">}</span></span>
+<span class="line"> </span></code></pre></div>
+<h2>Конструкция foreach</h2>
+<ul>
+<li>Конструкция <strong>foreach</strong> выглядит следующим образом. Обратите внимание на круглые скобки, пробелы и фигурные скобки.</li>
+</ul>
+<div data-rehype-pretty-code-fragment=""><pre data-language="php" data-theme="default"><code data-language="php" data-theme="default"><span class="line"><span style="color:#CF222E">&lt;?</span><span style="color:#0550AE">php</span></span>
+<span class="line"><span style="color:#24292F"> </span></span>
+<span class="line"><span style="color:#CF222E">foreach</span><span style="color:#24292F"> ($iterable </span><span style="color:#CF222E">as</span><span style="color:#24292F"> $key </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> $value) {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// тело foreach</span></span>
+<span class="line"><span style="color:#24292F">}</span></span>
+<span class="line"> </span></code></pre></div>
+<h2>Конструкция try catch</h2>
+<ul>
+<li>Блоки конструкции <strong>try catch</strong> выглядят следующим образом. Обратите внимание на круглые скобки, пробелы и фигурные скобки.</li>
+</ul>
+<div data-rehype-pretty-code-fragment=""><pre data-language="php" data-theme="default"><code data-language="php" data-theme="default"><span class="line"><span style="color:#CF222E">&lt;?</span><span style="color:#0550AE">php</span></span>
+<span class="line"><span style="color:#24292F"> </span></span>
+<span class="line"><span style="color:#CF222E">try</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// тело try</span></span>
+<span class="line"><span style="color:#24292F">} </span><span style="color:#CF222E">catch</span><span style="color:#24292F"> (</span><span style="color:#0550AE">FirstExceptionType</span><span style="color:#24292F"> $e) {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// тело catch</span></span>
+<span class="line"><span style="color:#24292F">} </span><span style="color:#CF222E">catch</span><span style="color:#24292F"> (</span><span style="color:#0550AE">OtherExceptionType</span><span style="color:#24292F"> $e) {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// тело catch</span></span>
+<span class="line"><span style="color:#24292F">}</span></span>
+<span class="line"> </span></code></pre></div>
+<h2>Операторы</h2>
+<ul>
+<li>Перед и после <strong>бинарного</strong> оператора ДОЛЖЕН стоять пробел, за исключением операции <strong>конкатенации</strong> (<strong>.</strong>)</li>
+</ul>
+<div data-rehype-pretty-code-fragment=""><pre data-language="php" data-theme="default"><code data-language="php" data-theme="default"><span class="line"><span style="color:#CF222E">&lt;?</span><span style="color:#0550AE">php</span></span>
+<span class="line"><span style="color:#24292F"> </span></span>
+<span class="line"><span style="color:#24292F">$a </span><span style="color:#CF222E">=</span><span style="color:#24292F"> $b </span><span style="color:#CF222E">+</span><span style="color:#24292F"> $c;</span></span>
+<span class="line"><span style="color:#24292F">$a </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;string 1&#x27;</span><span style="color:#CF222E">.</span><span style="color:#0A3069">&#x27;string 2&#x27;</span><span style="color:#24292F">;</span></span>
+<span class="line"> </span></code></pre></div>
+<h2>Переменные</h2>
+<ul>
+<li>Переменные ДОЛЖНЫ именоваться в <strong><code>under_score</code></strong> (английские слова в идентификаторах разделяются подчеркиваниями).</li>
+</ul>
+<p>Для автоматического контроля за соблюдением стиля кода используется <a href="cs-fixer.md">php-cs-fixer</a>.</p></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/backend","query":{},"buildId":"Pey3ok0jtJ3wjb6vn5HYQ","assetPrefix":"/code-style-pub","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
